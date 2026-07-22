@@ -132,12 +132,7 @@
 
     <script>
         (function() {
-            const KEY = 'pinmytag_launch_target';
-            let target = parseInt(localStorage.getItem(KEY) || '0', 10);
-            if (!target || isNaN(target)) {
-                target = Date.now() + 30 * 24 * 60 * 60 * 1000;
-                localStorage.setItem(KEY, target.toString());
-            }
+            const target = Date.parse('2027-01-01T00:00:00Z');
 
             const d = document.getElementById('days');
             const h = document.getElementById('hours');
